@@ -1,0 +1,13 @@
+.messages-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	flex-grow: 1;
+	overflow-y: auto;
+
+	&__info-message {
+		opacity: 0.7;
+		text-align: center;
+		font-size: rem-calc(14);
+	}
+}

@@ -1,0 +1,26 @@
+/**
+ * Grid
+ */
+$grid-width: rem-calc(1400);
+
+/**
+ * Typography
+ */
+$body-font-family: 'Poppins', 'Helvetica', 'Arial', sans-serif;
+
+/**
+ * Colors
+ */
+$black: #000000;
+$white: #ffffff;
+$gray: #e0e0e0;
+$yellow: #ffd900;
+$blue: #434dd3;
+$purple: #ab47bc;
+$purple2: #9c27b0;
+$purple-gradient: linear-gradient(to right, $purple, $blue);
+
+/**
+ * Misc
+ */
+$global-radius: rem-calc(25);

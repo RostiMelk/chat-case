@@ -1,0 +1,30 @@
+.message {
+	display: flex;
+	margin-top: rem-calc(10);
+
+	&--is-owner {
+		justify-content: flex-end;
+		.message__inner {
+			color: $white;
+			background: $purple-gradient;
+		}
+	}
+	&--is-guest {
+		.message__inner {
+			background-color: $gray;
+		}
+	}
+
+	&--is-emoji {
+		font-size: rem-calc(40);
+		.message__inner {
+			background: none;
+		}
+	}
+
+	&__inner {
+		display: inline-block;
+		padding: rem-calc(10 12);
+		border-radius: rem-calc(100);
+	}
+}

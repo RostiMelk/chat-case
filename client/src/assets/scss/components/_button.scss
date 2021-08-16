@@ -1,0 +1,35 @@
+.button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	min-width: rem-calc(40);
+	height: rem-calc(40);
+	border: 0;
+	border-radius: rem-calc(100);
+	color: $white;
+	cursor: pointer;
+	background-color: $purple;
+	@include transition;
+
+	&:hover,
+	&:focus {
+		background-color: $purple2;
+	}
+
+	&--is-secondary {
+		border: rem-calc(2) solid $purple;
+		color: $black;
+		background: $white;
+		&:hover,
+		&:focus {
+			background-color: rgba($purple, 0.1);
+		}
+	}
+	&--is-disabled {
+	}
+	&--has-icon {
+	}
+	&--has-text {
+		column-gap: rem-calc(20);
+	}
+}

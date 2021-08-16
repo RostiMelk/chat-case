@@ -1,0 +1,23 @@
+.input {
+	margin-bottom: rem-calc(8);
+	background-color: $gray;
+	border: 0;
+	border-radius: $global-radius;
+	height: rem-calc(40);
+	padding: rem-calc(0 20);
+
+	/**
+     * Hide Arrows From Input Number
+     */
+	// Chrome, Safari, Edge, Opera
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	// Firefox
+	&[type='number'] {
+		-moz-appearance: textfield;
+	}
+}

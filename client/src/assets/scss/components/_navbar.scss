@@ -1,0 +1,12 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.hand-wave {
+	position: absolute;
+	transform-origin: center;
+	animation: hand-wave 1.2s ease 1.5s;
+	margin-left: 20px;
+}
