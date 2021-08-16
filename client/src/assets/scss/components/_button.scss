@@ -17,14 +17,14 @@
 	}
 
 	&--is-secondary {
-		border: rem-calc(2) solid $purple;
 		color: $black;
-		background: $white;
+		background: $yellow;
 		&:hover,
 		&:focus {
-			background-color: rgba($purple, 0.1);
+			background-color: darken($yellow, 4);
 		}
 	}
+
 	&--is-disabled {
 	}
 	&--has-icon {

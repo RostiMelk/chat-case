@@ -1,50 +1,62 @@
 .message-input {
 	$size: rem-calc(44);
+	display: flex;
 	position: relative;
 	margin: rem-calc(20 0);
+	column-gap: rem-calc(10);
 
-	&__input {
-		box-sizing: border-box;
-		width: 100%;
-		height: $size;
-		padding: rem-calc(0 60 0 14);
-		border: 0;
-		border: rem-calc(2) solid $gray;
-		border-radius: $size;
-		border-radius: $size;
-		@include transition();
+	&__wrapper {
+		position: relative;
+		flex-grow: 1;
+		&__input {
+			box-sizing: border-box;
+			width: 100%;
+			height: $size;
+			padding: rem-calc(0 60 0 14);
+			border: 0;
+			border: rem-calc(2) solid $gray;
+			border-radius: $size;
+			border-radius: $size;
+			@include transition();
 
-		&:focus {
-			border-color: lighten($purple, 30);
-			outline: none;
+			&:focus {
+				border-color: lighten($purple, 30);
+				outline: none;
+			}
+
+			&:placeholder-shown {
+				& + .message-input__wrapper__button {
+					background-color: $gray;
+				}
+			}
 		}
 
-		&:placeholder-shown {
-			& + .message-input__button {
-				background-color: $gray;
+		&__button {
+			$offset: rem-calc(4);
+			position: absolute;
+			top: 50%;
+			right: rem-calc(4);
+			box-sizing: border-box;
+			width: calc(#{$size} - #{$offset} * 2);
+			height: calc(#{$size} - #{$offset} * 2);
+			border: 0;
+			border-radius: $size;
+			color: $white;
+			cursor: pointer;
+			background-color: $purple;
+			transform: translateY(-50%);
+			@include transition();
+
+			&:hover,
+			&:focus {
+				background-color: $purple2;
 			}
 		}
 	}
 
-	&__button {
-		$offset: rem-calc(4);
+	&__emoji-picker {
 		position: absolute;
-		top: 50%;
-		right: rem-calc(4);
-		box-sizing: border-box;
-		width: calc(#{$size} - #{$offset} * 2);
-		height: calc(#{$size} - #{$offset} * 2);
-		border: 0;
-		border-radius: $size;
-		color: $white;
-		cursor: pointer;
-		background-color: $purple;
-		transform: translateY(-50%);
-		@include transition();
-
-		&:hover,
-		&:focus {
-			background-color: $purple2;
-		}
+		bottom: calc(100% + #{rem-calc(20)});
+		right: 0;
 	}
 }
